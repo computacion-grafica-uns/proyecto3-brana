@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.frenzy3d.standarddisplacementshader": {
+      "version": "https://github.com/FrenzyByte/StandardDisplacementShader.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "82b471c494d763fd0d466cc4d4c0bebd98c05512"
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.6",
       "depth": 0,

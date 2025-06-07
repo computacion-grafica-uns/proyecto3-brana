@@ -5,7 +5,7 @@ using UnityEngine;
 public class Room : MonoBehaviour
 {
     public string roomName;
-    public GameObject camera;
+    public GameObject roomCamera;
     private Anomalia[] anomalies;
 
     private void Start()
@@ -19,7 +19,7 @@ public class Room : MonoBehaviour
 
     public GameObject GetCamera()
     {
-        return camera;
+        return roomCamera;
     }
 
     public bool ActivateAnomaly()
