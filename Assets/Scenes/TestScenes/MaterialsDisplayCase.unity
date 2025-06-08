@@ -604,7 +604,7 @@ GameObject:
   - component: {fileID: 407872830}
   - component: {fileID: 407872829}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: LeafSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3728,7 +3728,7 @@ GameObject:
   - component: {fileID: 798616397}
   - component: {fileID: 798616398}
   m_Layer: 0
-  m_Name: we
+  m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5386,7 +5386,7 @@ GameObject:
   - component: {fileID: 2037140741}
   - component: {fileID: 2037140740}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Sidewall (separate?)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5830,7 +5830,7 @@ GameObject:
   - component: {fileID: 4259290237573620246}
   - component: {fileID: 7958217949201344390}
   m_Layer: 0
-  m_Name: W_Side
+  m_Name: Edges
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5906,7 +5906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9069652240848219307}
   m_Layer: 0
-  m_Name: pond4
+  m_Name: PondContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5924,7 +5924,7 @@ GameObject:
   - component: {fileID: 2455255980108718011}
   - component: {fileID: 4430398266871067351}
   m_Layer: 0
-  m_Name: W_box.001
+  m_Name: Mainbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
