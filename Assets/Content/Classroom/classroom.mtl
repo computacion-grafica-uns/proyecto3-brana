@@ -1,0 +1,106 @@
+# Blender 3.5.0 MTL File: 'classroom.blend'
+# www.blender.org
+
+newmtl Chair
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/sandali-1_COLOR.png
+
+newmtl ClassroomTable
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.788950 0.410729
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Material.003
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Tiles028_2K-JPG_Color.jpg
+map_Ns C:/Tiles028_2K-JPG_Roughness.jpg
+map_Bump -bm 1.000000 C:/Tiles028_2K-JPG_NormalGL.jpg
+
+newmtl Material.004
+Ns 21.157019
+Ka 1.000000 1.000000 1.000000
+Kd 0.520996 0.508881 0.462077
+Ks 0.231818 0.231818 0.231818
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Screen
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/monitor1.jpg
+
+newmtl TrashCan
+Ns 219.194244
+Ka 0.186364 0.186364 0.186364
+Kd 0.035218 0.035218 0.035218
+Ks 0.718182 0.718182 0.718182
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Wall
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Wallpaper001A_2K-JPG_Color.jpg
+map_Ns C:/Wallpaper001A_2K-JPG_Roughness.jpg
+map_Bump -bm 1.000000 C:/Wallpaper001A_2K-JPG_NormalGL.jpg
+
+newmtl Whiteboard
+Ka 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/Whiteboard_Albedo.png
+map_Ks C:/Whiteboard_Specular.png
+map_Ns C:/Whiteboard_Roughness.png
+map_refl C:/Whiteboard_Metalness.png
+map_Bump -bm 1.000000 C:/Whiteboard_Normal.png
+
+newmtl Wood
+Ns 159.999985
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:/Wood_baseColor.png
+
+newmtl case-keyboard-mouse
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:/case-keyboard-mouse.jpg
