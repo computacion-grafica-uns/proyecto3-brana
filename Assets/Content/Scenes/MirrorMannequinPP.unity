@@ -5058,7 +5058,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 501008618}
-  - component: {fileID: 501008617}
+  - component: {fileID: 501008619}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -5066,18 +5066,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &501008617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501008616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c2c09d76073f5f4b8925091d9df70ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &501008618
 Transform:
   m_ObjectHideFlags: 0
@@ -5093,6 +5081,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &501008619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501008616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c2c09d76073f5f4b8925091d9df70ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &576322001
 GameObject:
   m_ObjectHideFlags: 0
@@ -5547,6 +5547,7 @@ GameObject:
   - component: {fileID: 1150461004}
   - component: {fileID: 1150461003}
   - component: {fileID: 1150461002}
+  - component: {fileID: 1150461006}
   m_Layer: 0
   m_Name: WaterPlane
   m_TagString: WaterLayer
@@ -5644,6 +5645,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -10.969}
+--- !u!114 &1150461006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150461001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a78066d6d426db5499eb33e29709a2c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1214103383
 GameObject:
   m_ObjectHideFlags: 0
