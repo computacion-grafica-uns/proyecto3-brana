@@ -1,33 +1,5 @@
 sceneSetups:
-- path: Assets/Content/Scenes/MirrorMannequinPP.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Content/Scenes/MaterialsDisplayCase.unity
+- path: Assets/Scenes/UnificationTest.unity
   isLoaded: 1
   isActive: 1
-  isSubScene: 0
-- path: Assets/Content/Scenes/FrostedGlass.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Content/Scenes/RoomTest1.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Content/Scenes/Water.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Content/Scenes/Classroom.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Content/Scenes/Loft.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Scenes/SampleScene.unity
-  isLoaded: 0
-  isActive: 0
   isSubScene: 0

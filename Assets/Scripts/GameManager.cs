@@ -1,5 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+using NUnit.Framework;
+using System.Linq;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -34,6 +34,7 @@ public class GameManager : MonoBehaviour
 
     public void CreateAnomaly()
     {
+        Debug.LogWarning("[GameManager::CreateAnomaly] " + rooms.Length + " " + rooms);
         int randomRoom = Random.Range(0, rooms.Length);
         if (randomRoom != currentRoom)
         {
@@ -56,10 +57,10 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.D)|| Input.GetKeyDown(KeyCode.RightArrow))
         {
-            ChangeCameraForwards();
+            Debug.LogWarning("Camera forwards!!!"); ChangeCameraForwards();
         }else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            ChangeCameraBackwards();
+            Debug.LogWarning("Camera backwards!!!"); ChangeCameraBackwards();
         }
 
         CheckGameOver();
@@ -127,5 +128,9 @@ public class GameManager : MonoBehaviour
     public int GetAnomaliesFound()
     {
         return anomaliesFound;
+    }
+
+    public string[] GetRoomNames() {
+        return rooms.Select((r) => r.roomName).ToArray();
     }
 }

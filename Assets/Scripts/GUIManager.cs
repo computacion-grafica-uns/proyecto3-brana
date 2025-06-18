@@ -9,11 +9,13 @@ public class GUIManager : MonoBehaviour
 {
     public GameManager gameManager;
 
+    public float DEBUG_InvokeTiming = 5.0f;
+
     public GameObject reportingMenu;
     public Button reportMenuButton;
     public Button reportButton;
 
-    public Button bServer, bVillage, bDungeon, bImagen, bDesplazamiento, bDuplicado, bElectrico, bIntruso, bParanormal;
+    public Button bRoomA, bRoomB, bRoomC, bImagen, bDesplazamiento, bDuplicado, bElectrico, bIntruso, bParanormal;
 
     private string selectedRoom = "";
     private string selectedAnomaly = "";
@@ -34,9 +36,27 @@ public class GUIManager : MonoBehaviour
 
     private void Start()
     {
-        bServer.onClick.AddListener(delegate () { OnRoomButtonClicked(bServer,"Server"); });
-        bVillage.onClick.AddListener(delegate () { OnRoomButtonClicked(bVillage, "Village"); });
-        bDungeon.onClick.AddListener(delegate () { OnRoomButtonClicked(bDungeon, "Dungeon"); });
+        string[] roomNames = gameManager.GetRoomNames();
+        foreach(string r in roomNames) { Debug.LogWarning("[DEBUG:GUIMANAGER::START()] " + r); }
+
+        // set buttons' text to the room names
+        TMP_Text roomA_name = bRoomA.GetComponentInChildren<TMP_Text>();
+        roomA_name.text = roomNames[0];
+
+        TMP_Text roomB_name = bRoomB.GetComponentInChildren<TMP_Text>();
+        roomB_name.text = roomNames[1];
+
+        TMP_Text roomC_name = bRoomC.GetComponentInChildren<TMP_Text>();
+        roomC_name.text = roomNames[2];
+
+        // fix the hardcoded room names here
+        /* bRoomA.onClick.AddListener(delegate () { OnRoomButtonClicked(bRoomA,"Server"); });
+        bRoomB.onClick.AddListener(delegate () { OnRoomButtonClicked(bRoomB, "Village"); });
+        bRoomC.onClick.AddListener(delegate () { OnRoomButtonClicked(bRoomC, "Dungeon"); }); */
+
+        bRoomA.onClick.AddListener(delegate () { OnRoomButtonClicked(bRoomA, roomNames[0]); });
+        bRoomB.onClick.AddListener(delegate () { OnRoomButtonClicked(bRoomB, roomNames[1]); });
+        bRoomC.onClick.AddListener(delegate () { OnRoomButtonClicked(bRoomC, roomNames[2]); });
 
         bImagen.onClick.AddListener(delegate () { OnAnomalyButtonClicked(bImagen, "Imagen"); });
         bDesplazamiento.onClick.AddListener(delegate () { OnAnomalyButtonClicked(bDesplazamiento, "Desplazamiento"); });
@@ -74,9 +94,9 @@ public class GUIManager : MonoBehaviour
         reportButton.interactable = false;
         selectedAnomaly = "";
         selectedRoom = "";
-        bServer.interactable = true;
-        bVillage.interactable = true;
-        bDungeon.interactable = true; 
+        bRoomA.interactable = true;
+        bRoomB.interactable = true;
+        bRoomC.interactable = true; 
         bImagen.interactable = true; 
         bDesplazamiento.interactable = true; 
         bDuplicado.interactable = true; 
@@ -85,15 +105,15 @@ public class GUIManager : MonoBehaviour
         bParanormal.interactable = true;
         reportingMenu.SetActive(true);
         reportMenuButton.interactable = true;
-
     }
 
     private void OnRoomButtonClicked(Button b, string roomName)
     {
+        Debug.LogWarning("[DEBUG: GUIManager::OnRoomButtonClicked] roomName=" + roomName + " - Button = " + b.name);
         selectedRoom = roomName;
-        bServer.interactable = true;
-        bVillage.interactable = true;
-        bDungeon.interactable = true;
+        bRoomA.interactable = true;
+        bRoomB.interactable = true;
+        bRoomC.interactable = true;
         b.interactable = false;
     }
 
@@ -111,9 +131,9 @@ public class GUIManager : MonoBehaviour
 
     public void Report()
     {
-        bServer.interactable = false;
-        bVillage.interactable = false;
-        bDungeon.interactable = false;
+        bRoomA.interactable = false;
+        bRoomB.interactable = false;
+        bRoomC.interactable = false;
         bImagen.interactable = false;
         bDesplazamiento.interactable = false;
         bDuplicado.interactable = false;
@@ -122,7 +142,7 @@ public class GUIManager : MonoBehaviour
         bParanormal.interactable = false;
         reportButton.GetComponentInChildren<TextMeshProUGUI>().text = "REPORTING...";
         reportMenuButton.interactable = false;
-        Invoke("ReportToGameManager", 5);
+        Invoke("ReportToGameManager", DEBUG_InvokeTiming);
     }
 
     private void ReportToGameManager()
