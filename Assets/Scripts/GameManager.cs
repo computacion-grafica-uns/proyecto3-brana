@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     public void CreateAnomaly()
     {
-        Debug.LogWarning("[GameManager::CreateAnomaly] " + rooms.Length + " " + rooms);
+        // Debug.LogWarning("[GameManager::CreateAnomaly] " + rooms.Length + " " + rooms);
         int randomRoom = Random.Range(0, rooms.Length);
         if (randomRoom != currentRoom)
         {
@@ -57,10 +57,11 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.D)|| Input.GetKeyDown(KeyCode.RightArrow))
         {
-            Debug.LogWarning("Camera forwards!!!"); ChangeCameraForwards();
-        }else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+            ChangeCameraForwards();
+        }
+        else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            Debug.LogWarning("Camera backwards!!!"); ChangeCameraBackwards();
+            ChangeCameraBackwards();
         }
 
         CheckGameOver();

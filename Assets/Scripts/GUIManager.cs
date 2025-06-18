@@ -37,7 +37,7 @@ public class GUIManager : MonoBehaviour
     private void Start()
     {
         string[] roomNames = gameManager.GetRoomNames();
-        foreach(string r in roomNames) { Debug.LogWarning("[DEBUG:GUIMANAGER::START()] " + r); }
+        // foreach(string r in roomNames) { Debug.LogWarning("[DEBUG:GUIMANAGER::START()] " + r); }
 
         // set buttons' text to the room names
         TMP_Text roomA_name = bRoomA.GetComponentInChildren<TMP_Text>();
@@ -49,11 +49,7 @@ public class GUIManager : MonoBehaviour
         TMP_Text roomC_name = bRoomC.GetComponentInChildren<TMP_Text>();
         roomC_name.text = roomNames[2];
 
-        // fix the hardcoded room names here
-        /* bRoomA.onClick.AddListener(delegate () { OnRoomButtonClicked(bRoomA,"Server"); });
-        bRoomB.onClick.AddListener(delegate () { OnRoomButtonClicked(bRoomB, "Village"); });
-        bRoomC.onClick.AddListener(delegate () { OnRoomButtonClicked(bRoomC, "Dungeon"); }); */
-
+        // TODO: create buttons dynamically based on room count
         bRoomA.onClick.AddListener(delegate () { OnRoomButtonClicked(bRoomA, roomNames[0]); });
         bRoomB.onClick.AddListener(delegate () { OnRoomButtonClicked(bRoomB, roomNames[1]); });
         bRoomC.onClick.AddListener(delegate () { OnRoomButtonClicked(bRoomC, roomNames[2]); });
@@ -109,7 +105,7 @@ public class GUIManager : MonoBehaviour
 
     private void OnRoomButtonClicked(Button b, string roomName)
     {
-        Debug.LogWarning("[DEBUG: GUIManager::OnRoomButtonClicked] roomName=" + roomName + " - Button = " + b.name);
+        // Debug.LogWarning("[DEBUG: GUIManager::OnRoomButtonClicked] roomName=" + roomName + " - Button = " + b.name);
         selectedRoom = roomName;
         bRoomA.interactable = true;
         bRoomB.interactable = true;

@@ -11,8 +11,6 @@ public class Room : MonoBehaviour
     private void Start()
     {
         Debug.LogWarning("New room: name = " + roomName);
-        // Component[] cs = this.GetComponents<Component>();
-        // Debug.LogWarning("[DEBUG/Room::Start()] " + cs);
         anomalies = GetComponents<Anomalia>();
         Debug.LogWarning("Room " + roomName + ": " + anomalies.Length + " " + anomalies);
         foreach(Anomalia a in anomalies)
